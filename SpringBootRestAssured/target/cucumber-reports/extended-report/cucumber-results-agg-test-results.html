@@ -1,0 +1,288 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.known {background-color:goldenrod;font-weight:bold;color:darkred}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+.comment {font-family:courier;font-weight:normal;font-size:small;color:black;border:1px dashed black;background-color:silver}
+.tip {font-family:courier;font-weight:normal;font-size:small;color:white;background-color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: auto;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+</style>
+<title>Detailed Results Report</title>
+<meta charset="UTF-8" />
+</head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+<h1>Overview</h1>
+
+
+<table>
+	<tr><th></th><th>Passed</th><th>Failed</th><th>Known</th><th>Undefined</th><th>Total</th><th>%Passed</th></tr>
+	<tr><th>Features</th>
+		<td class="passed" id="features_passed">1</td>
+		<td class="failed" id="features_failed">0</td>
+		<td class="known" id="features_known">0</td>
+		<td class="undefined" id="features_undefined">0</td>
+		<td id="features_total">1</td>
+		<td id="features_rate">
+				100%
+		</td>
+	</tr>
+	<tr><th>Scenarios</th>
+		<td class="passed" id="scenarios_passed">2</td>
+		<td class="failed" id="scenarios_failed">0</td>
+		<td class="known" id="scenarios_known">0</td>
+		<td class="undefined" id="scenarios_undefined">0</td>
+		<td id="scenarios_total">2</td>
+		<td id="scenarios_rate">
+				100%
+		</td>
+	</tr>
+	<tr><th>Steps</th>
+		<td class="passed" id="steps_passed">18</td>
+		<td class="failed" id="steps_failed">0</td>
+		<td class="known" id="steps_known">0</td>
+		<td class="undefined" id="steps_undefined">0</td>
+		<td id="steps_total">18</td>
+		<td id="steps_rate">
+				100%
+		</td>
+	</tr>
+</table>
+<div><b>Overall Duration: 0h 00m 09s</b></div>
+
+<a id="top"></a><h1>Table of Contents</h1>
+
+<ol>
+<li> <span class="passed"><a href="#feature-1as-a-user-i-want-to-update-pet-details">As a user I want to update pet details</a></span>
+	<ol>
+        <li> <span class="passed"><a href="#sc-21-as-a-user-i-want-to-update-pet-details;pet-is-created-first;;2">Pet is created first</a></span></li>
+        <li> <span class="passed"><a href="#sc-22-as-a-user-i-want-to-update-pet-details;pet-is-created-first;;3">Pet is created first</a></span></li>
+    </ol></li>
+</ol>
+
+<h1>Detailed Results Report</h1>
+
+<table width="700px">
+	<tr class="passed"><td colspan="4"><b>Feature:</b> <a id="feature-1as-a-user-i-want-to-update-pet-details">As a user I want to update pet details</a></td></tr>
+    <tr class="passed">
+    	<td><small><b>Passed:</b> 2</small></td>
+        <td><small><b>Failed:</b> 0</small></td>
+        <td><small><b>Undefined:</b> 0</small></td>
+        <td><small>Duration: 9.73s</small></td>
+    </tr>
+	<tr class="passed">
+		<td colspan="4" style="padding-left:20px">
+		<table width="100%">
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario Outline:</b> <a id="sc-21-as-a-user-i-want-to-update-pet-details;pet-is-created-first;;2">Pet is created first</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 9</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 6.65s</small></td>
+				</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Given </b> Create Pet entry that should be added to store with following attributes</td>
+                            		<td width="100">0.16s</td>
+                        		</tr>
+	 								<tr class="passed">
+	 									<td style="padding-left:20px" colspan="2">
+	 										<table>
+	 											<tr>
+	 													<td>category</td>
+	 													<td>Domestic</td>
+												</tr>
+	 											<tr>
+	 													<td>name</td>
+	 													<td>jackie</td>
+												</tr>
+	 											<tr>
+	 													<td>status</td>
+	 													<td>available</td>
+												</tr>
+            								</table>
+        								</td>
+    								</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> Prepare POST request for creating new Pet</td>
+                            		<td width="100">0.42s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>When </b> POST request is sent to create Pet endpoint</td>
+                            		<td width="100">3.85s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> &quot;200&quot; should be returned</td>
+                            		<td width="100">0.01s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Given </b> pet entry is created with updated details</td>
+                            		<td width="100">0.01s</td>
+                        		</tr>
+	 								<tr class="passed">
+	 									<td style="padding-left:20px" colspan="2">
+	 										<table>
+	 											<tr>
+	 													<td>updatedname</td>
+	 													<td>Kuroku</td>
+												</tr>
+            								</table>
+        								</td>
+    								</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> Prepare PUT request for creating new Pet</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>When </b> PUT request is sent to create Pet endpoint</td>
+                            		<td width="100">1.65s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> Details should be update successfully</td>
+                            		<td width="100">0.57s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> &quot;200&quot; should be returned</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario Outline:</b> <a id="sc-22-as-a-user-i-want-to-update-pet-details;pet-is-created-first;;3">Pet is created first</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 9</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 3.08s</small></td>
+				</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Given </b> Create Pet entry that should be added to store with following attributes</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+	 								<tr class="passed">
+	 									<td style="padding-left:20px" colspan="2">
+	 										<table>
+	 											<tr>
+	 													<td>category</td>
+	 													<td>International</td>
+												</tr>
+	 											<tr>
+	 													<td>name</td>
+	 													<td>doggu</td>
+												</tr>
+	 											<tr>
+	 													<td>status</td>
+	 													<td>available</td>
+												</tr>
+            								</table>
+        								</td>
+    								</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> Prepare POST request for creating new Pet</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>When </b> POST request is sent to create Pet endpoint</td>
+                            		<td width="100">1.55s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> &quot;200&quot; should be returned</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Given </b> pet entry is created with updated details</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+	 								<tr class="passed">
+	 									<td style="padding-left:20px" colspan="2">
+	 										<table>
+	 											<tr>
+	 													<td>updatedname</td>
+	 													<td>Kuroku Number 2</td>
+												</tr>
+            								</table>
+        								</td>
+    								</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> Prepare PUT request for creating new Pet</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>When </b> PUT request is sent to create Pet endpoint</td>
+                            		<td width="100">1.51s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> Details should be update successfully</td>
+                            		<td width="100">0.02s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> &quot;200&quot; should be returned</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+		</table>
+	</td></tr><tr><td colspan="5"></td></tr>
+</table>
+
+	</body>
+</html>

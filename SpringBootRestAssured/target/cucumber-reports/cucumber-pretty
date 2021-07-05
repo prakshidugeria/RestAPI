@@ -1,0 +1,42 @@
+Feature: As a user I want to update pet details
+
+  Scenario Outline: Pet is created first                                           # src/test/resources/features/UpdatePet/putpet.feature:2
+    #Create Pet
+    Given Create Pet entry that should be added to store with following attributes
+    And Prepare POST request for creating new Pet
+    When POST request is sent to create Pet endpoint
+    Then "<responseCode>" should be returned
+    #Update Pet
+    Given pet entry is created with updated details
+    And Prepare PUT request for creating new Pet
+    When PUT request is sent to create Pet endpoint
+    Then Details should be update successfully
+    Then "<responseCode>" should be returned
+
+    Examples: 
+
+  Scenario Outline: Pet is created first                                           # src/test/resources/features/UpdatePet/putpet.feature:21
+    #Create Pet
+    Given Create Pet entry that should be added to store with following attributes # stepDefinationPet.create_Pet_entry_that_should_be_added_to_store_with_following_attributes(DataTable)
+    And Prepare POST request for creating new Pet                                  # stepDefinationPet.prepare_POST_request_for_creating_new_Pet()
+    When POST request is sent to create Pet endpoint                               # stepDefinationPet.post_request_is_sent_to_create_Pet_endpoint()
+    Then "200" should be returned                                                  # stepDefinationCommon.shouldBeReturned(String)
+    #Update Pet
+    Given pet entry is created with updated details                                # stepDefinationPutPet.pet_entry_is_created_with_updated_details(DataTable)
+    And Prepare PUT request for creating new Pet                                   # stepDefinationPutPet.prepare_PUT_request_for_creating_new_Pet()
+    When PUT request is sent to create Pet endpoint                                # stepDefinationPutPet.put_request_is_sent_to_create_Pet_endpoint()
+    Then Details should be update successfully                                     # stepDefinationPutPet.details_should_be_update_successfully()
+    Then "200" should be returned                                                  # stepDefinationCommon.shouldBeReturned(String)
+
+  Scenario Outline: Pet is created first                                           # src/test/resources/features/UpdatePet/putpet.feature:22
+    #Create Pet
+    Given Create Pet entry that should be added to store with following attributes # stepDefinationPet.create_Pet_entry_that_should_be_added_to_store_with_following_attributes(DataTable)
+    And Prepare POST request for creating new Pet                                  # stepDefinationPet.prepare_POST_request_for_creating_new_Pet()
+    When POST request is sent to create Pet endpoint                               # stepDefinationPet.post_request_is_sent_to_create_Pet_endpoint()
+    Then "200" should be returned                                                  # stepDefinationCommon.shouldBeReturned(String)
+    #Update Pet
+    Given pet entry is created with updated details                                # stepDefinationPutPet.pet_entry_is_created_with_updated_details(DataTable)
+    And Prepare PUT request for creating new Pet                                   # stepDefinationPutPet.prepare_PUT_request_for_creating_new_Pet()
+    When PUT request is sent to create Pet endpoint                                # stepDefinationPutPet.put_request_is_sent_to_create_Pet_endpoint()
+    Then Details should be update successfully                                     # stepDefinationPutPet.details_should_be_update_successfully()
+    Then "200" should be returned                                                  # stepDefinationCommon.shouldBeReturned(String)
